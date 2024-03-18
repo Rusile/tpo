@@ -4,7 +4,6 @@ class Node {
 
     int element, sValue;
 
-    // class has two parameters
     Node left, right;
 
     public Node(int element) {
