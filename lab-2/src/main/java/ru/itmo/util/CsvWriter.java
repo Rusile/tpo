@@ -24,7 +24,7 @@ public class CsvWriter {
         }
         try (PrintWriter printWriter = new PrintWriter(Files.newBufferedWriter(path))) {
             printWriter.println("x,ƒ(x)");
-            for (double current = from; current <= to; current += step) {
+            for (double current = from; current - to <= 0; current += step) {
                 printWriter.println(current + "," + function.apply(current));
             }
         }
