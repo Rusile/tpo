@@ -9,9 +9,17 @@ public class Application {
 
     public static void main(String[] args) throws IOException {
         CsvWriter.write(
-                "result/system.csv",
+                "result/system_left.csv",
                 (x) -> IncredibleSystem.calculate(x, 1000),
-                -2,
+                -1,
+                0,
+                0.1
+        );
+
+        CsvWriter.write(
+                "result/system_right.csv",
+                (x) -> IncredibleSystem.calculate(x, 1000),
+                1,
                 2,
                 0.1
         );
