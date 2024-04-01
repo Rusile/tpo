@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class IncredibleSystemTest {
 
-    private static final double DELTA = 1e-6; // Погрешность для чисел с плавающей запятой
+    private static final double DELTA = 1e-6;
 
     @Test
     public void testCalculateFirstInterval() {

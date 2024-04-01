@@ -14,8 +14,6 @@ import static org.mockito.Mockito.when;
 
 class IncredibleSystemWithMocksTest {
 
-    private static final double DELTA = 1e-6; // Погрешность для чисел с плавающей запятой
-
     @Test
     void testLeftInterval() {
         Mockito.mockStatic(SinCalculator.class);
@@ -35,15 +33,5 @@ class IncredibleSystemWithMocksTest {
                 .thenReturn(1.00);
 
         assertEquals(2.00, IncredibleSystem.calculate(1, 10));
-    }
-
-    private double expectedFun(double x) {
-        if (x > 0) {
-            return Math.pow(
-                    Math.log10(x * x) - Math.log(x) / Math.log(5) + Math.log(x) / Math.log(2), 3)
-                    + Math.pow(Math.log(x) / Math.log(2), 2);
-        }
-
-        return Math.tan(x) + Math.sin(x);
     }
 }
